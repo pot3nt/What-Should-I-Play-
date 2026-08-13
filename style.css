@@ -1,0 +1,971 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(120, 70, 255, 0.12), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(0, 180, 255, 0.08), transparent 30%),
+        #08080d;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   CURSOR GLOW
+======================================== */
+
+.cursor-glow {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+
+    background: radial-gradient(
+        circle,
+        rgba(120, 80, 255, 0.12),
+        transparent 70%
+    );
+
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+nav {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: relative;
+    z-index: 10;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    background: rgba(8, 8, 13, 0.75);
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    background: linear-gradient(90deg, #8b5cf6, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.65);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 6%;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.eyebrow-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #8b5cf6;
+
+    box-shadow: 0 0 15px #8b5cf6;
+}
+
+.eyebrow-year {
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    font-size: 10px;
+}
+
+.hero h1 {
+    margin-top: 25px;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #6366f1,
+        #38bdf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    max-width: 580px;
+
+    margin: 30px auto;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   HERO BUTTONS
+======================================== */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.primary,
+.secondary {
+    min-height: 52px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 0 24px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.primary {
+    border: none;
+
+    background: white;
+
+    color: #08080d;
+
+    box-shadow: 0 10px 35px rgba(255, 255, 255, 0.08);
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(255, 255, 255, 0.15);
+}
+
+.secondary {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: white;
+}
+
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-3px);
+}
+
+.button-icon {
+    font-size: 18px;
+}
+
+.button-arrow {
+    font-size: 18px;
+
+    transition: 0.2s ease;
+}
+
+.primary:hover .button-arrow {
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
+
+section {
+    padding: 100px 7%;
+}
+
+.section-header {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+}
+
+.section-header h2 {
+    margin-top: 20px;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    letter-spacing: -3px;
+
+    line-height: 1;
+}
+
+.section-header p {
+    margin-top: 20px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   LUCKY SECTION
+======================================== */
+
+.lucky-section {
+    text-align: center;
+
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+
+/* ========================================
+   LUCKY RESULT
+======================================== */
+
+.lucky-result {
+    width: min(700px, 90%);
+
+    min-height: 190px;
+
+    margin: 40px auto 25px;
+
+    padding: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    text-align: left;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.lucky-result:hover {
+    border-color: rgba(139, 92, 246, 0.25);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35),
+        0 0 50px rgba(139, 92, 246, 0.05);
+}
+
+
+/* ========================================
+   QUESTION MARK
+======================================== */
+
+.question-mark {
+    width: 75px;
+    height: 75px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.18),
+            rgba(56, 189, 248, 0.08)
+        );
+
+    border: 1px solid rgba(139, 92, 246, 0.25);
+
+    color: white;
+
+    font-size: 36px;
+    font-weight: 900;
+
+    box-shadow:
+        0 0 30px rgba(139, 92, 246, 0.08);
+}
+
+
+/* ========================================
+   LUCKY GAME TEXT
+======================================== */
+
+.lucky-result h3 {
+    margin: 8px 0;
+
+    font-size: 28px;
+
+    font-weight: 900;
+}
+
+.lucky-result p {
+    margin: 8px 0 20px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   LUCKY BUTTON
+======================================== */
+
+#luckyButton {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 0 auto;
+
+    padding: 16px 30px;
+
+    min-width: 220px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #dddddd
+    );
+
+    color: #08080d;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#luckyButton:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+#luckyButton:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   ROLLING ANIMATION
+======================================== */
+
+.lucky-result.rolling {
+    animation: luckyShake 0.12s infinite alternate;
+}
+
+.lucky-result.rolling .question-mark {
+    animation: luckySpin 0.35s linear infinite;
+}
+
+@keyframes luckySpin {
+
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.08);
+    }
+
+}
+
+@keyframes luckyShake {
+
+    from {
+        transform: translateY(-2px);
+    }
+
+    to {
+        transform: translateY(2px);
+    }
+
+}
+
+
+/* ========================================
+   GENRES
+======================================== */
+
+.genres {
+    padding-top: 100px;
+}
+
+.genre-buttons {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.genre-card {
+    position: relative;
+
+    min-height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-color: rgba(139, 92, 246, 0.3);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(139, 92, 246, 0.05);
+}
+
+.genre-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    font-size: 25px;
+}
+
+.genre-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.genre-info strong {
+    font-size: 17px;
+}
+
+.genre-info small {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+}
+
+.genre-arrow {
+    margin-left: auto;
+
+    font-size: 22px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    transition: 0.2s ease;
+}
+
+.genre-card:hover .genre-arrow {
+    transform: translateX(5px);
+
+    color: white;
+}
+
+
+/* ========================================
+   GAME LIBRARY
+======================================== */
+
+.games {
+    padding-top: 100px;
+}
+
+.game-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* ========================================
+   GAME CARDS
+======================================== */
+
+.game-card {
+    min-height: 310px;
+
+    position: relative;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+    transform-style: preserve-3d;
+}
+
+.game-card:hover {
+    border-color: rgba(139, 92, 246, 0.25);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.game-card-content {
+    height: 100%;
+
+    min-height: 310px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 28px;
+}
+
+
+/* ========================================
+   GAME CARD GENRE
+======================================== */
+
+.game-genre {
+    display: inline-flex;
+
+    width: fit-content;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background: rgba(139, 92, 246, 0.1);
+
+    color: #a78bfa;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   GAME CARD TITLE
+======================================== */
+
+.game-card h3 {
+    margin-top: 15px;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ========================================
+   GAME CARD DESCRIPTION
+======================================== */
+
+.game-card p {
+    margin-top: 12px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PLAY BUTTON
+======================================== */
+
+.play-button {
+    margin-top: auto;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    background: white;
+
+    color: #08080d;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.play-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(255, 255, 255, 0.12);
+}
+
+.play-arrow {
+    font-size: 16px;
+
+    transition: 0.2s ease;
+}
+
+.play-button:hover .play-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* ========================================
+   NO GAMES MESSAGE
+======================================== */
+
+.no-games {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.no-games h3 {
+    font-size: 24px;
+}
+
+.no-games p {
+    margin-top: 10px;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    margin-top: 100px;
+
+    padding: 50px 7%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer p {
+    font-size: 13px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 80px 5%;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .primary,
+    .secondary {
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .genre-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .lucky-result {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    .question-mark {
+        width: 65px;
+        height: 65px;
+    }
+
+    .lucky-result h3 {
+        font-size: 23px;
+    }
+
+    #luckyButton {
+        width: 90%;
+
+        max-width: 300px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}

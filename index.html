@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What Should I Play?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- ========================================
+         CURSOR GLOW
+    ======================================== -->
+
+    <div class="cursor-glow"></div>
+
+
+    <!-- ========================================
+         NAVIGATION
+    ======================================== -->
+
+    <nav>
+
+        <div class="logo">
+            WHAT SHOULD I <span>PLAY?</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#games">
+                Games
+            </a>
+
+            <a href="#genres">
+                Genres
+            </a>
+
+            <a href="#lucky">
+                I'm Feeling Lucky
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- ========================================
+             HERO
+        ======================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+
+                    <span class="eyebrow-dot"></span>
+
+                    GAME DISCOVERY
+
+                    <span class="eyebrow-year">
+                        2026
+                    </span>
+
+                </div>
+
+
+                <h1>
+
+                    What should
+                    <span class="gradient-text">
+                        I play?
+                    </span>
+
+                </h1>
+
+
+                <p class="description">
+
+                    Discover your next favorite Roblox game.
+                    Explore by genre, find something new,
+                    or let us choose for you.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#genres" class="secondary">
+
+                        Browse Games
+
+                        <span>
+                            ↓
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             LUCKY SECTION
+        ======================================== -->
+
+        <section id="lucky" class="lucky-section">
+
+
+            <div class="section-header">
+
+                <div class="eyebrow">
+
+                    <span class="eyebrow-dot"></span>
+
+                    CAN'T DECIDE?
+
+                </div>
+
+
+                <h2>
+
+                    Let
+                    <span class="gradient-text">
+                        luck
+                    </span>
+                    decide.
+
+                </h2>
+
+
+                <p>
+
+                    Hit the button and we'll randomly
+                    pick a game for you.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ========================================
+                 LUCKY GAME RESULT
+            ======================================== -->
+
+            <div id="luckyResult" class="lucky-result">
+
+
+                <div class="question-mark">
+                    ?
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Ready to roll?
+                    </h3>
+
+
+                    <p>
+                        Click "I'm Feeling Lucky"
+                        to discover a random game.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ========================================
+                 LUCKY BUTTON
+            ======================================== -->
+
+            <button
+                class="primary"
+                id="luckyButton"
+            >
+
+                <span class="button-icon">
+                    ✦
+                </span>
+
+                I'm Feeling Lucky
+
+                <span class="button-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- ========================================
+             GENRES
+        ======================================== -->
+
+        <section id="genres" class="genres">
+
+
+            <div class="section-header">
+
+                <div class="eyebrow">
+
+                    <span class="eyebrow-dot"></span>
+
+                    BROWSE BY GENRE
+
+                </div>
+
+
+                <h2>
+
+                    Find your
+                    <span class="gradient-text">
+                        type of game.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Choose a genre and discover
+                    games you'll actually want to play.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ========================================
+                 GENRE BUTTONS
+            ======================================== -->
+
+            <div class="genre-buttons">
+
+
+                <!-- FPS -->
+
+                <button
+                    class="genre-card"
+                    data-genre="FPS"
+                >
+
+                    <span class="genre-icon">
+                        🔫
+                    </span>
+
+
+                    <span class="genre-info">
+
+                        <strong>
+                            FPS
+                        </strong>
+
+                        <small>
+                            Fast-paced combat
+                        </small>
+
+                    </span>
+
+
+                    <span class="genre-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- FIGHTING -->
+
+                <button
+                    class="genre-card"
+                    data-genre="Fighting"
+                >
+
+                    <span class="genre-icon">
+                        ⚔️
+                    </span>
+
+
+                    <span class="genre-info">
+
+                        <strong>
+                            Fighting
+                        </strong>
+
+                        <small>
+                            Battle your rivals
+                        </small>
+
+                    </span>
+
+
+                    <span class="genre-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- HORROR -->
+
+                <button
+                    class="genre-card"
+                    data-genre="Horror"
+                >
+
+                    <span class="genre-icon">
+                        👻
+                    </span>
+
+
+                    <span class="genre-info">
+
+                        <strong>
+                            Horror
+                        </strong>
+
+                        <small>
+                            Not for the scared
+                        </small>
+
+                    </span>
+
+
+                    <span class="genre-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- ADVENTURE -->
+
+                <button
+                    class="genre-card"
+                    data-genre="Adventure"
+                >
+
+                    <span class="genre-icon">
+                        🌎
+                    </span>
+
+
+                    <span class="genre-info">
+
+                        <strong>
+                            Adventure
+                        </strong>
+
+                        <small>
+                            Explore something new
+                        </small>
+
+                    </span>
+
+
+                    <span class="genre-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- BUILDING -->
+
+                <button
+                    class="genre-card"
+                    data-genre="Building"
+                >
+
+                    <span class="genre-icon">
+                        🏗️
+                    </span>
+
+
+                    <span class="genre-info">
+
+                        <strong>
+                            Building
+                        </strong>
+
+                        <small>
+                            Create your world
+                        </small>
+
+                    </span>
+
+
+                    <span class="genre-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- RACING -->
+
+                <button
+                    class="genre-card"
+                    data-genre="Racing"
+                >
+
+                    <span class="genre-icon">
+                        🏎️
+                    </span>
+
+
+                    <span class="genre-info">
+
+                        <strong>
+                            Racing
+                        </strong>
+
+                        <small>
+                            Leave everyone behind
+                        </small>
+
+                    </span>
+
+
+                    <span class="genre-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- FUNNY -->
+
+                <button
+                    class="genre-card"
+                    data-genre="Funny"
+                >
+
+                    <span class="genre-icon">
+                        😂
+                    </span>
+
+
+                    <span class="genre-info">
+
+                        <strong>
+                            Funny
+                        </strong>
+
+                        <small>
+                            Just have fun
+                        </small>
+
+                    </span>
+
+
+                    <span class="genre-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- STRATEGY -->
+
+                <button
+                    class="genre-card"
+                    data-genre="Strategy"
+                >
+
+                    <span class="genre-icon">
+                        🧠
+                    </span>
+
+
+                    <span class="genre-info">
+
+                        <strong>
+                            Strategy
+                        </strong>
+
+                        <small>
+                            Think before you play
+                        </small>
+
+                    </span>
+
+
+                    <span class="genre-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             GAME LIBRARY
+        ======================================== -->
+
+        <section id="games" class="games">
+
+
+            <div class="section-header">
+
+                <div class="eyebrow">
+
+                    <span class="eyebrow-dot"></span>
+
+                    GAME LIBRARY
+
+                </div>
+
+
+                <h2>
+
+                    Pick something
+                    <span class="gradient-text">
+                        awesome.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    A hand-picked collection
+                    of games worth checking out.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ========================================
+                 GAME GRID
+            ======================================== -->
+
+            <div
+                id="gameGrid"
+                class="game-grid"
+            >
+
+                <!--
+                    JavaScript will put
+                    the game cards here.
+                -->
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================================
+             FOOTER
+        ======================================== -->
+
+        <footer>
+
+
+            <div class="logo">
+
+                WHAT SHOULD I
+                <span>
+                    PLAY?
+                </span>
+
+            </div>
+
+
+            <p>
+                Find your next game.
+            </p>
+
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
